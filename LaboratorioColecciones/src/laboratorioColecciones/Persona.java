@@ -1,52 +1,39 @@
 package laboratorioColecciones;
 
-public class Persona implements Comparable<Persona> {
-	
-	String nombre;
-	String genero;
-	int edad;
-	int estatura;
-	
-	public Persona(String nombre, String genero, int edad, int estatura) {
-		super();
-		this.nombre = nombre;
-		this.genero = genero;
-		this.edad = edad;
-		this.estatura = estatura;
-	}
-	
-	
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getGenero() {
-		return genero;
-	}
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	public int getEstatura() {
-		return estatura;
-	}
-	public void setEstatura(int estatura) {
-		this.estatura = estatura;
-	}
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
+class Persona implements Comparable<Persona> {
+    private String nombre;
+    private int edad;
+    private String genero;
 
-	@Override
-	public int compareTo(Persona o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    public Persona(String nombre, int edad, String genero) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
+    }
 
+    public String getNombre() {
+        return nombre;
+    }
 
-}
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    @Override
+    public int compareTo(Persona otraPersona) {
+        return this.nombre.compareTo(otraPersona.getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + ", Edad: " + edad + ", Género: " + genero;
+    }
