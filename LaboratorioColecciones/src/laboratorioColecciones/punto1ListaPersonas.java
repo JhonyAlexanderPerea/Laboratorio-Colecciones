@@ -2,7 +2,7 @@ package laboratorioColecciones;
 
 import java.util.ArrayList;
 
-public class punto1ListaPersonas {
+public class punto1ListaPersonas {	
 	
 	 public static void main(String[] args) {
 	        List<Persona> personas = new ArrayList<>();
