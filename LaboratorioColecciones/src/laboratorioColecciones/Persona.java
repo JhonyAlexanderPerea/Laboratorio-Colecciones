@@ -1,10 +1,5 @@
 package laboratorioColecciones;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 class Persona implements Comparable<Persona> {
     private String nombre;
     private int edad;
@@ -37,3 +32,5 @@ class Persona implements Comparable<Persona> {
     public String toString() {
         return "Nombre: " + nombre + ", Edad: " + edad + ", Género: " + genero;
     }
+}
+
